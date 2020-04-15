@@ -3,8 +3,8 @@ import {
   Link
 } from "react-router-dom";
 
-function ArticleCard(props  ) {
-  const { id, categoryName, title , postedAt, summary, imageUrl } = props;
+function ArticleCard(prop) {
+  const { id, categoryName, title , postedAt, summary, imageUrl} = prop;
   return (
     <div className="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
       <div className="col p-4 d-flex flex-column position-static">
@@ -76,11 +76,11 @@ class Blog extends React.Component {
           <div className="col-md-6" key={index}>
             <ArticleCard
               id={article.id}
-              categoryName = {article.title}
-              title = {article.title}
-              postedAt = {article.postedAt}
-              summary = {article.summary}
-              imageUrl = {article.imageUrl}
+              categoryName={article.categoryName}
+              postedAt={article.postedAt}
+              summary={article.summary}
+              imageUrl={article.imageUrl}
+              title={article.title}
             />
           </div>
         ))}
